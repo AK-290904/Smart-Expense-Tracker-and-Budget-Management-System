@@ -29,27 +29,27 @@ A full-stack web application for intelligent database management with chatbot in
 
 ### Backend
 
-* Framework: *Flask 3.0+*
-* Database: *MySQL 8.0+*
-* ORM: *SQLAlchemy*
-* Authentication: *JWT (Flask-JWT-Extended)*
-* Validation: *Marshmallow*
-* Migrations: *Flask-Migrate*
+* Framework: **Flask 3.0+**
+* Database: **MySQL 8.0+**
+* ORM: **SQLAlchemy**
+* Authentication: **JWT (Flask-JWT-Extended)**
+* Validation: **Marshmallow**
+* Migrations: **Flask-Migrate**
 
 ### Frontend
 
-* Framework: *React 18+*
-* Routing: *React Router v6*
-* HTTP Client: *Axios*
-* Charts: *Recharts / Chart.js*
-* Icons: *Lucide React*
-* Styling: *TailwindCSS + CSS Variables*
+* Framework: **React 18+**
+* Routing: **React Router v6**
+* HTTP Client: **Axios**
+* Charts: **Recharts / Chart.js**
+* Icons: **Lucide React**
+* Styling: **TailwindCSS + CSS Variables**
 
 ---
 
 ## Project Structure
 
-
+```
 intellidb/
 ├── backend/
 │   ├── app/
@@ -82,7 +82,7 @@ intellidb/
 │   └── tailwind.config.js
 │
 └── README.md
-
+```
 
 ---
 
@@ -96,64 +96,64 @@ intellidb/
 
 ### Backend Setup
 
-bash
+```bash
 cd backend
 python -m venv venv
 venv\Scripts\activate   # Windows
 pip install -r requirements.txt
-
+```
 
 #### Configure Environment
 
-Create a .env file in the backend directory:
+Create a `.env` file in the backend directory:
 
-bash
+```bash
 FLASK_APP=run.py
 FLASK_ENV=development
 SECRET_KEY=your-secret-key-here
 JWT_SECRET_KEY=your-jwt-secret-key-here
 DATABASE_URL=mysql+pymysql://username:password@localhost/intellidb
 CORS_ORIGINS=http://localhost:3000
-
+```
 
 #### Initialize Database
 
-bash
+```bash
 flask db init
 flask db migrate -m "Initial migration"
 flask db upgrade
-
+```
 
 #### Run Backend
 
-bash
+```bash
 flask run
+```
 
-
-Backend runs on: [*http://localhost:5000*](http://localhost:5000)
+Backend runs on: [**http://localhost:5000**](http://localhost:5000)
 
 ---
 
 ### Frontend Setup
 
-bash
+```bash
 cd frontend
 npm install
+```
 
+Create a `.env` file in frontend directory:
 
-Create a .env file in frontend directory:
-
-bash
+```bash
 REACT_APP_API_URL=http://localhost:5000/api/v1
-
+```
 
 Run Frontend:
 
-bash
+```bash
 npm start
+```
 
-
-Frontend runs on: [*http://localhost:3000*](http://localhost:3000)
+Frontend runs on: [**http://localhost:3000**](http://localhost:3000)
 
 ---
 
@@ -216,17 +216,17 @@ Frontend runs on: [*http://localhost:3000*](http://localhost:3000)
 
 ### Backend Tests
 
-bash
+```bash
 cd backend
 pytest
-
+```
 
 ### Frontend Tests
 
-bash
+```bash
 cd frontend
 npm test
-
+```
 
 ---
 
@@ -234,33 +234,33 @@ npm test
 
 ### Backend (Production)
 
-bash
+```bash
 gunicorn -w 4 -b 0.0.0.0:5000 run:app
-
+```
 
 ### Frontend (Production)
 
-bash
+```bash
 npm run build
+```
 
-
-Serve the build/ folder with Nginx or Apache.
+Serve the `build/` folder with Nginx or Apache.
 
 ---
 
 ## Contributing
 
 1. Fork the repository
-2. Create a new branch (git checkout -b feature/new-feature)
-3. Commit your changes (git commit -m 'Add new feature')
-4. Push to the branch (git push origin feature/new-feature)
+2. Create a new branch (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
 5. Open a Pull Request
 
 ---
 
 ## License
 
-This project is licensed under the *MIT License*.
+This project is licensed under the **MIT License**.
 
 ---
 
