@@ -50,7 +50,7 @@ A full-stack web application for intelligent database management with chatbot in
 ## Project Structure
 
 ```
-intellidb/
+smart_expense_tracker/
 ├── backend/
 │   ├── app/
 │   │   ├── __init__.py
@@ -274,8 +274,3 @@ This project is licensed under the **MIT License**.
 
 ---
 
-## Contributors
-
-* Akshita Khanduri
-* Aabhash Anand
-* Arpan Sharma
