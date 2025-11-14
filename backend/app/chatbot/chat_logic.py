@@ -25,7 +25,7 @@ from .context_manager import (
 
 
 # API Configuration
-API_KEY = os.getenv("OPENROUTER_API_KEY", "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")
+API_KEY = os.getenv("OPENROUTER_API_KEY", "")
 MODEL = "mistralai/mixtral-8x7b-instruct"
 
 session = requests.Session()
